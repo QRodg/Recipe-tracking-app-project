@@ -13,14 +13,15 @@ header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* typography */
+/* Typography */
 
 html {
-  font-family: 'helvetica neue', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt';
+thead th,
+tfoot th {
+  font-family: 'Rock Salt', cursive;
 }
 
 th {
@@ -30,11 +31,89 @@ th {
 
 td {
   letter-spacing: 1px;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow: hidden;
   font-size: 12px;
   padding: 10px;
   text-align: center;
+  vertical-align: middle;
+}
+
+/* Table */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Column sizing */
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 12%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 12%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 15%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 21%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  width: 25%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  width: 15%;
+}
+
+/* Recipe rows */
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Recipe content */
+
+.content_td p {
+  max-width: 100%;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+/* Recipe images */
+
+.recipe-list img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto;
+}  text-align: center;
 }
 
 /* table */

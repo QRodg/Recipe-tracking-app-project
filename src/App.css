@@ -102,7 +102,6 @@ tbody tr:hover {
   max-height: 100px;
   overflow-y: auto;
   overflow-x: hidden;
-  text-overflow: ellipsis;
   margin: 0;
 }
 

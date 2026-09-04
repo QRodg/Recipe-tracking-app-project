@@ -45,7 +45,7 @@ function RecipeCreate({ createRecipe }) {
       />
 
       <input
-        type="url"
+        type="text"
         name="photo"
         placeholder="Photo URL"
         value={recipe.photo}

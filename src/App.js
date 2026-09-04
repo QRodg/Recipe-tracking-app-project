@@ -9,16 +9,16 @@ function App() {
 
   // Add new recipe
   const createRecipe = (recipe) => {
-    setRecipes([
-      ...recipes,
+    setRecipes((currentRecipes) => [
+      ...currentRecipes,
       recipe,
     ]);
   };
 
   // Delete recipe by index
   const deleteRecipe = (index) => {
-    setRecipes(
-      recipes.filter((_, recipeIndex) => recipeIndex !== index)
+    setRecipes((currentRecipes) =>
+      currentRecipes.filter((_, recipeIndex) => recipeIndex !== index)
     );
   };
 
@@ -28,12 +28,11 @@ function App() {
         <h1>Delicious Food Recipes</h1>
       </header>
 
-      <RecipeCreate createRecipe={createRecipe} />
-
       <RecipeList
         recipes={recipes}
         deleteRecipe={deleteRecipe}
       />
+      <RecipeCreate createRecipe={createRecipe} />
     </div>
   );
 }
